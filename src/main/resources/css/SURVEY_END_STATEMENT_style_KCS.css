@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.SURVEY_PERIOD{border:1px solid #000; line-height: 100%; padding : 5px 5px;margin:5px 0px;}
+
+.SURVEY_PERIOD > h4{margin: 0px; padding : 5px 5px;}
+
+.SURVEY_PERIOD > p{margin: 0px; padding : 5px 5px;}
+
+.SURVEY_GUIDE_STATEMENT{ border: 1px solid #000; padding : 3px 0px; margin: 5px 0px;}
+
+.SURVEY_GUIDE_STATEMENT > h4{border-bottom: 1px solid #000; margin:0 0 3px 0px; padding : 0 0 5px 0}
+
+.SURVEY_GUIDE_STATEMENT > div{overflow: auto; height:150px; padding : 5px 5px; margin:3px;}
+
+.SURVEY_END_STATEMENT{ border:1px solid #000; line-height: 100%; margin: 0 0 10px 0;}
+
+.SURVEY_END_STATEMENT > h3{margin: 5px; padding : 5px 5px;  border-bottom: 1px solid #000; }
+
+.SURVEY_END_STATEMENT > div {overflow: auto; height:150px; padding : 5px 5px; margin:3px;}
+
+.RETURN_LIST > h4{text-align: center;}
+
+.RETURN_LIST > h4 > button{width: 30%;}
