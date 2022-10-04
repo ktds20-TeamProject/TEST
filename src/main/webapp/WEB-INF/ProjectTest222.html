@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <style>
+        .form-control2>div {
+            text-align: left;
+        }
+
+        .form-control2>div>input {
+            float: right;
+        }
+
+        .d-grid>p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ADMIN_JOIN" style="display: block; border: 1px solid #000; padding: 0.4em; text-align: center; width: 12em; margin: -3em 0 0 -6.4em;  position:absolute;
+    top:40%; left:50%;">
+            <div class="col-12 mx-auto">
+                <form class="form-control" action="login" method="post" ;>
+                    <div>
+                        <label class="form-label">회원 가입</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="container" style="display: block; border: 1px solid #000; padding: 1em; text-align: center; width: 18em; display: table; margin: 0 0 0 -10em;  position:absolute;
+    top:40%; left:50%;">
+
+            <div class="col-12 mx-auto">
+                <form class="form-control2" action="login" method="post">
+                    <div>
+                        <label for="userId" class="form-label">아이디</label>
+                        <input type="text" name="user_id" id="userId" class="form-control" placeholder="아이디"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='아이디'">
+                    </div>
+                    <div>
+                        <label for="password" class="form-label">비밀번호</label>
+                        <input type="text" name="user_pw" id="password" class="form-control" placeholder="비밀번호"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='비밀번호'">
+                    </div>
+                    <div>
+                        <label for="password" class="form-label">비밀번호 확인</label>
+                        <input type="text" name="user_pw" id="password" class="form-control" placeholder="비밀번호 확인"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='비밀번호 확인'">
+                    </div>
+                    <div>
+                        <label for="password" class="form-label">이름</label>
+                        <input type="text" name="user_pw" id="password" class="form-control" placeholder="이름"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='이름'">
+                    </div>
+                    <div>
+                        <label for="password" class="form-label">직급</label>
+                        <input type="text" name="user_pw" id="password" class="form-control" placeholder="직급"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='직급'">
+                    </div>
+                    <div>
+                        <label for="password" class="form-label">연락처</label>
+                        <input type="text" name="user_pw" id="password" class="form-control" placeholder="연락처"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='연락처'">
+                    </div>
+                    <div>
+                        <label for="password" class="form-label">이메일</label>
+                        <input type="text" name="user_pw" id="password" class="form-control" placeholder="이메일"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='이메일'">
+                    </div>
+                    <div class="d-grid">
+                        <p><button class="btn btn-center btn-block my-3">가입하기</button></p>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
