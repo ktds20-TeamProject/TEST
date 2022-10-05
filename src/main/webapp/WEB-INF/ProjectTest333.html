@@ -20,55 +20,48 @@
             margin: 0;
         }
 
-        .check-info > p > span{
+        .check-info>p>span {
             padding: 0 2em;
         }
-        
     </style>
 </head>
 
 <body>
     <div class="ADMIN_INFO" style="display: block; border: 1px solid #000; padding: 0.4em; text-align: center; width: 12em; margin: -3em 0 0 -6.4em;  position:absolute;
     top:40%; left:50%;">
-        <div class="col-12 mx-auto">
-            <form class="form-control" action="login" method="post" ;>
-                <div>
-                    <label class="form-label">관리자 정보 수정</label>
-                </div>
-            </form>
-        </div>
+        <form class="form-control" action="login" method="post" ;>
+            <div>
+                <label class="form-label">관리자 비밀번호 확인</label>
+            </div>
+        </form>
     </div>
 
     <div class="INPUT_PW" style="display: block; border: 1px solid #000; padding: 1em; text-align: center; width: 18em; display: table; margin: 0 0 0 -10em;  position:absolute;
     top:40%; left:50%;">
 
-        <div class="col-12 mx-auto">
-            <form class="form-control2" action="login" method="post">
-                <div>
-                    <label for="userId" class="form-label">비밀번호 확인</label>
-                    <input type="text" name="user_id" id="userId" class="form-control" placeholder="비밀번호 확인"
-                        onfocus="this.placeholder=''" onblur="this.placeholder='비밀번호 확인'">
-                </div>
+        <form class="form-control2" action="login" method="post">
+            <div>
+                <label for="userId" class="form-label">비밀번호 확인</label>
+                <input type="text" name="user_id" id="userId" class="form-control" placeholder="비밀번호 확인"
+                    onfocus="this.placeholder=''" onblur="this.placeholder='비밀번호 확인'">
+            </div>
 
-                <div class="check-info" style="margin: 1em 0 0 0;">
-                   <p><span style="display:inline-block">
+            <div class="check-info" style="margin: 1em 0 0 0;">
+                <p><span style="display:inline-block">
                         <button style="display: block; background-color: white;"
-                            class="btn btn-center btn-block my-3">확?인</button>
-                    </span> 
+                            class="btn btn-center btn-block my-3">확인</button>
+                    </span>
                     <span style="display:inline-block">
                         <button style="display: block; background-color: white;"
-                            class="btn btn-center btn-block my-3">취?소</button>
-                    </span></p>
-                </div>
-            </form>
-
-        </div>
+                            class="btn btn-center btn-block my-3">취소</button>
+                    </span>
+                </p>
+            </div>
+        </form>
     </div>
-<script>
+    <script>
 
-</script>
-
-
+    </script>
 </body>
 
 </html>

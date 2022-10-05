@@ -19,6 +19,15 @@
         .d-grid>p {
             text-align: center;
         }
+
+        .check-info>p {
+            text-align: center;
+            margin: 0;
+        }
+
+        .check-info>p>span {
+            padding: 0 2em;
+        }
     </style>
 </head>
 
@@ -28,7 +37,7 @@
     top:40%; left:50%;">
             <form class="form-control" action="login" method="post" ;>
                 <div>
-                    <label class="form-label">회원 가입</label>
+                    <label class="form-label">관리자 정보 수정</label>
                 </div>
             </form>
         </div>
@@ -72,8 +81,16 @@
                     <input type="text" name="user_pw" id="password" class="form-control" placeholder="이메일"
                         onfocus="this.placeholder=''" onblur="this.placeholder='이메일'">
                 </div>
-                <div class="d-grid">
-                    <p><button class="btn btn-center btn-block my-3">가입하기</button></p>
+                <div class="check-info" style="margin: 1em 0 0 0;">
+                    <p><span style="display:inline-block">
+                            <button style="display: block; background-color: white;"
+                                class="btn btn-center btn-block my-3">확인</button>
+                        </span>
+                        <span style="display:inline-block">
+                            <button style="display: block; background-color: white;"
+                                class="btn btn-center btn-block my-3">취소</button>
+                        </span>
+                    </p>
                 </div>
             </form>
         </div>
