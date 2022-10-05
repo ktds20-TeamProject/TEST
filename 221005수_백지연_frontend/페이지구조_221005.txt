@@ -1,0 +1,32 @@
+main > webapp > WEB-INF > views
+
+00. main.jsp (=home)
+
+01. commons (type:folder)
+- header.jsp
+- side.jsp
+- footer.jsp
+- layout.jsp
+- admin_main.jsp 관리자 메인
+- user_main.jsp 사용자 메인
+
+02. member (=admins)
+- login_form 로그인 화면
+- admin_join 관리자 회원가입
+- admin_info_update 관리자 정보수정
+- admin_password_ok 관리자 비밀번호 확인
+- admin_out 관리자 탈퇴
+- admin_findid 관리자 아이디 찾기
+- admin_findpwd 관리자 비밀번호 찾기
+
+03. survey
+- survey_info_and_option 기본 정보 및 옵션 설정
+- survey_basic_composition 설문지 기본 구성
+- survey_question_compo 설문지 문항 구성
+- servey_result 설문 결과
+
+04. user
+- user_main_cert 사용자 본문-인증
+- user_main_terms 사용자 본문-약관
+- user_main_response 사용자 본문-전체
+- user_main_finish 사용자 본문-완료(임의)
