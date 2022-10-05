@@ -1,5 +1,61 @@
+
+
+.question_inform {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+}
+
+.question_number {
+    border: 1px solid black;
+    flex: 0.30;
+    margin-right: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.question_title {
+    border: 1px solid black;
+    flex: 0.7;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.required_answer_container {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+}
+
+.required_blank {
+    flex: 0.3;
+    margin-right: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.required_answer {
+    border: 1px solid black;
+    flex: 0.7;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+
+
 .STAR_SURVEY{
     border: 1px solid #000;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+}
+
+.STAR_SURVEY1{
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
 }
 
 .QUESTION_CONTENTS > p {
