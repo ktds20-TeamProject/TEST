@@ -33,12 +33,12 @@
 
 </script>
 
-<title>설문 응답 결과</title>
+<title>Survey_result</title>
 </head>
 <body>
     <!--기본정보 DIV-->
     <div class="container">
-        <!--설문 진행 기간에 따라 현재 진행상태 표시-->
+        <!--설문 진행 기간에 따라 현재 진행상태 표시. sysdate와 비교하면 될 듯?-->
         <div class="mainContents" id="surveyIcon">
             종료된 설문
         </div>
@@ -64,8 +64,10 @@
         <table class="basicStatTable">
             <tr>
             <td class="firstCell" style="font-weight:bold;">총 문항 수</td>
+            <!-- 총 문항 수 쿼리문으로 받아오기 -->
             <td class="rightCell" style="font-size:2em; color:var(--bogoblue);">NN</td>
             <td style="font-weight:bold;">총 응답자 수</td>
+            <!-- 총 응답자 수 쿼리문으로 받아오기 -->
             <td class="rightCell" style="font-size:2em; color:var(--bogoblue);">NN</td>
             </tr>
         </table>
@@ -77,7 +79,7 @@
         </div>
         <div class="innerTitle"> 문항별 통계</div>
         <div>
-            <!--여기부터 각각의 문항별 뷰가 아래로 하나씩 추가되면 됨-->
+            <!--여기부터 각각의 문항별 뷰(jsp)가 아래로 하나씩 추가되면 됨. 데이터 바인딩 필요.-->
         </div>
     </div>
 </body>

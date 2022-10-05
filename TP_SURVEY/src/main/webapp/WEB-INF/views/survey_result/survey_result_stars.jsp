@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" 
+    isELIgnored="false"  %> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<c:set var="contextPath"  value="${pageContext.request.contextPath}"  />
+<%  request.setCharacterEncoding("UTF-8"); %>
 
+<html>
+<head>
+<meta charset=UTF-8>
     <!--부트스트랩 css(jsp용)-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-grid.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-reboot.css">
@@ -23,56 +26,88 @@
     <link rel="stylesheet" href="../../../resources/css/survey_result_lys.css">
     <!--폰트어썸-->
     <script src="https://kit.fontawesome.com/8e8e06ef00.js" crossorigin="anonymous"></script>
-    <!--Chart.js <다운로드 받는걸로 바꿀까??? 고민을 하넌 중-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <title>question_multiple_result</title>
+	    
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script> 
+	<script type="text/javascript">
+	
+
+</script>
+
+<title>Survey_result_multipleTable</title>
 </head>
 <body>
     <!--질문 기본정보-->
-    <div class="questionInfo"> 
+    <div class="questionInfo">  
         <table style="width:100%;">
             <tr rowspan="2">
                 <!--질문 번호/내용/타입 받아와서 표기되도록-->
                 <th colspan="2" style="width:10px;"><p class="questionNum">Q1</p></th>
                 <th colspan="3">
-                    <p class="questionText">질문 내용이만약에존나길다며면길다며면길다며면길다며면길다며면길다며면길다며면길다며면 <span class="questionType">(객관식)</span></p>
+                    <p class="questionText">질문 내용이만약에존나길다며면길다며면길다며면길다며면길다며면길다며면길다며면길다며면 <span class="questionType">(별점)</span></p>
                 </th>
             </tr>
             <tr>
                 <td style="border-top:solid 1px lightgray; width:5%"></td>
                 <td colspan="3" style="border-top:solid 1px lightgray">
-                    <!--이제 여기 테이블에 foreach어쩌구로 하나씩 열 추가해야함-->
                     <table class="choiceTable">
                         <tr>
-                            <td class="cTableNum"><p class="choiceNum">1</p></td>
-                            <td class="cTableText">지문</td>
+                        <!-- 각 별점 별 응답자 수와 퍼센테이지 쿼리문으로 가져오기 -->
+                            <td class="cTableNum"><p class="starsNum">1</p></td>
+                            <td class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </td>
                             <td class="cTableResult">0명 (nn%)</td>
                         </tr>
                         <tr>
-                            <td class="cTableNum"><p class="choiceNum">2</p></td>
-                            <td class="cTableText">지문지</td>
+                            <td class="cTableNum"><p class="starsNum">2</p></td>
+                            <td class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </td>
                             <td class="cTableResult">0명 (nn%)</td>
                         </tr>
                         <tr>
-                            <td class="cTableNum"><p class="choiceNum">3</p></td>
-                            <td class="cTableText">지문지문</td>
+                            <td class="cTableNum"><p class="starsNum">3</p></td>
+                            <td class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </td>
                             <td class="cTableResult">0명 (nn%)</td>
                         </tr>
                         <tr>
-                            <td class="cTableNum"><p class="choiceNum">4</p></td>
-                            <td class="cTableText">지문지문</td>
+                            <td class="cTableNum"><p class="starsNum">4</p></td>
+                            <td class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </td>
                             <td class="cTableResult">0명 (nn%)</td>
                         </tr>
                         <tr>
-                            <td class="cTableNum"><p class="choiceNum">5</p></td>
-                            <td class="cTableText">지문지문</td>
+                            <td class="cTableNum"><p class="starsNum">5</p></td>
+                            <td class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </td>
                             <td class="cTableResult">0명 (nn%)</td>
                         </tr>
                     </table>
                 </td>
-                <!--rowspan에 들어가는 넘버: 마지막 지문의 번호-->
                 <td rowspan="5" style="width:40%; margin-left:10px; border-top:solid 1px lightgray">
                     <canvas id="questionChart"></canvas>
                 </td>
@@ -80,6 +115,7 @@
             <tr>
                 <td colspan="3"></td>
                 <td class="cTableTotal">
+                <!-- 총 응답자 수 쿼리문으로 가져오기 -->
                     총 응답자 N명
                     <a href="응답자 상세보기 링크 작성" title="응답 내역 상세보기" class="button2 btnWHO">상세보기</a>
                 </td>
@@ -93,35 +129,25 @@
         .getContext('2d');
     var questionChart = new Chart(context, {
         type: 'bar', // 차트의 형태
-        data: { // 차트에 들어갈 데이터
+        data: { // 차트에 들어갈 데이터 내용 지정
             labels: [
-                //축
+                //축. 별 개수.
                 '1','2','3','4','5'
             ],
             datasets: [
                 { //데이터
-                    label: '응답자 수', //차트 제목
-                    fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                    label: '응답자 수',
+                    fill: false,
                     data: [
-                        21,19,25,20,17 //x축 label에 대응되는 데이터 값
+                        21,19,25,20,17 //각 번호에 대응하는 응답자 데이터 값. hashmap으로?
                     ],
                     backgroundColor: [
-                        //색상
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
+                        //바 색상
+                        'rgba(255, 230, 0, 0.4)'
                     ],
                     borderColor: [
-                        //경계선 색상
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        //바 경계선 색상
+                        'rgba(255, 230, 0, 1)'
                     ],
                     borderWidth: 1 //경계선 굵기
                 }

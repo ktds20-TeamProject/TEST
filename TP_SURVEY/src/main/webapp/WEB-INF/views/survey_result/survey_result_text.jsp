@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" 
+    isELIgnored="false"  %> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<c:set var="contextPath"  value="${pageContext.request.contextPath}"  />
+<%  request.setCharacterEncoding("UTF-8"); %>
 
+<html>
+<head>
+<meta charset=UTF-8>
     <!--부트스트랩 css(jsp용)-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-grid.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-reboot.css">
@@ -23,12 +26,14 @@
     <link rel="stylesheet" href="../../../resources/css/survey_result_lys.css">
     <!--폰트어썸-->
     <script src="https://kit.fontawesome.com/8e8e06ef00.js" crossorigin="anonymous"></script>
-    <!--Chart.js <다운로드 받는걸로 바꿀까??? 고민을 하넌 중-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
+	    
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script> 
+	<script type="text/javascript">
+	
 
-    <title>question_text_result</title>
+</script>
+
+<title>Survey_result_multipleTable</title>
 </head>
 <body>
     <!--질문 기본정보-->
@@ -44,7 +49,8 @@
             <tr>
                 <td style="border-top:solid 1px lightgray; width:5%"></td>
                 <td colspan="4" style="border-top:solid 1px lightgray">
-                    <!--이제 여기 테이블에 foreach어쩌구로 하나씩 열 추가해야함-->
+                    <!--이제 여기 테이블에 지문의 수 따라 하나씩 지문 열 추가해야함. foreach?-->
+                    <!-- 응답자 정보와 답변내용 쿼리문으로 가져오기 -->
                     <table class="choiceTable">
                         <tr>
                             <th style="width:15%;">답변자</th>
@@ -64,6 +70,7 @@
                         </tr>
                         <!--토탈 넣을 행 forEach 후 따로 명시-->
                         <tr>
+                         <!-- 총 응답자 수 쿼리문으로 가져오기 -->
                             <td colspan="6" class="cTableTotal">총 응답자 N명</td>
                         </tr>
                     </table>
