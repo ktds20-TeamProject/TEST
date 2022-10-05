@@ -51,7 +51,7 @@
 								}else{ return ;}" />
 								<%-- confirm() 메소드는 삭제 유무를 판단하는 확인/취소 버튼을 가진 경고창을 띄움(자바스크립트)
 								   확인을 클릭하면 true, 취소를 클릭하면 false를 반환 --%>
-							</td>                  
+				  </td>                  
                 </tr>
                 <tr>
                   <th scope="row">2</th>
@@ -109,6 +109,11 @@
                 </tr>                                                                                                                 
               </tbody>
             </table>
+            <div class="row">
+            <div class="col-md-11">
+            <button type="button" class="btn btn-outline-primary" style="float:right;">등록하기</button>
+            </div>
+            </div>
             <br>
 			<%-- 쪽나누기 --%>
            <nav aria-label="Page navigation example">
@@ -136,7 +141,7 @@
 				<select name="#">
 					<option value="#">설문제목</option>
 				</select> 
-				<input name="#" id="#" size="14"value="" /> <input type="submit" class="btn btn-primary btn-sm" value="검색" />
+				<input name="#" id="#" size="14"value=""/> <input type="submit" class="btn btn-primary btn-sm" value="검색" />
 			</div>           
                      
          </div>      
