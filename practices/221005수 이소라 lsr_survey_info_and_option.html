@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!--html 에디터(썸머노트)-->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/lang/summernote-ko-KR.min.js"></script>
+        <style>
+        /* 데스크탑 */
+
+        @media screen and (max-width:1023px) {
+        /* 타블렛 */
+        }
+
+        @media screen and (max-width:767px) {
+        /* 모바일 */
+        }
+            
+        .container_lsr{
+            display: center;
+        }
+
+        .step_lsr{
+            padding: 20px 0;
+            border: 1px solid #ddd;
+            text-align: center;
+            
+        }
+        .step_lsr li::after {
+            background: url(C:\Users\User\vsc\TP_SURVEY\practices\images\images\ic-step.png) no-repeat 0px 0px;
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 12px;
+            margin: 0 30px;
+        }
+        ol, ul, li {
+            list-style: none;
+            margin-bottom: 0px !important;
+            display:inline;
+        }
+
+        .check_lsr {
+            margin: 0 30px;
+            display: inline-block;
+        }
+
+        .button_lsr{
+            margin: 0 30px;
+            display: inline-block;
+        }
+
+        .sub-conent-title-text-info-lsr {
+            font-size: 9px;
+            float: right;
+            margin-top: 3px;
+        }
+
+        .text-area-lsr{
+        margin-bottom: 0px;
+        height: 149px !important;
+        }
+        .text-area-survey-guide-statement-lsr{ /*설문 안내문*/
+            width:300px;
+            height:150px;
+        }
+      </style>
+      
+    <title>설문조사 등록(관리자용)</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="col-md-12">
+    <form>
+        <div class="container_lsr">
+            <div class="center">
+              <div class="col align-self-center">
+                <h1><b>설문조사 진행</b></h1>
+              </div>
+              <br>
+        <div class="form-group">
+            <div id="surveyLoad" class="none"></div>
+            <div class="container_lsr">
+                <div class="sub-title">
+                    <div class="sub-title-text"><h4><b>신규생성</b></h4></div>
+                </div>
+                <div class="step_lsr">
+                    <table>
+                        <ul>
+                            <li><img src="C:\Users\User\vsc\TP_SURVEY\practices\images\images\ic-step-01.png" alt="기본정보"> 기본정보</li>
+                            <li><img src="C:\Users\User\vsc\TP_SURVEY\practices\images\images\ic-step-02.png" alt="옵션설정"> 옵션설정</li>
+                            <li><img src="C:\Users\User\vsc\TP_SURVEY\practices\images\images\ic-step-03.png" alt="설문지 구성"> 설문지 구성</li>
+                            <li><class="step_lsr-last"><img src="C:\Users\User\vsc\TP_SURVEY\practices\images\images\ic-step-finish.png" alt="신규생성 완료"> 신규생성 완료</li>
+                        </ul>
+                    </table>
+                </div>
+            </div>
+            </div>
+            <table class="table b-t-0">
+                <colgroup>
+                    <col width="140px"/>
+                    <col width="*"/>
+                    <col width="30px"/>
+                    <col width="*"/>
+                </colgroup>
+                
+                <hr>
+                <div id="step1" class="container_lsr">
+                    <ul class="sub-conent-title p-t-80 p-b-15 b-b-3">
+                        <li class="text-pink step-text"><h1><b>STEP01</b></h1></li>
+                        <li class="sub-conent-title-text">기본정보</li>
+                        <li class="sub-conent-title-text-info-lsr">설문과 투표 중 원하는 유형을 선택한 후 작성해주세요.
+                            
+                            <button type="button" class="m-l-10 btn_lsr btn-md waves-effect bg-pink-strok w-145 m-t--20"
+                                data-toggle="modal" data-target="#list-call" id="surveyLoadButton">불러오기</button>
+                            
+                        </li>
+                    </ul>
+                    <br>
+                </div>
+                <br>
+                <!--설문조사 제목 등록-->
+                <tbody>
+                 <tr>
+                <th scope="row" class="b-t-0">제목</th>
+               <td colspan="3"><input id="surveyTitle" name="surveyTitle" placeholder="관리용 제목을 입력해주세요" label="제목" class="form-control" type="text" value=""/></td>
+            </tr>
+            <tr>
+				<th>진행기간</th>
+             
+				<td class="w-40-5-p">
+					<div class="calendar body">
+                        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ko.min.js">
+					<input id="surveyStartDate" name="surveyStartDate" before="2022-10-03" label="설문시작일" data-role="calendarpicker" class="form-control w-180 m-r-10 float-left" type="text" value="2022-10-03"/>
+					<select id="surveyStartHour" name="surveyStartHour" before="00" class="form-control w-118 inline-block">
+	                    <option value="00" selected="selected">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option>
+	                </select>
+	                <span class="p-l-5 p-r-5">:</span>
+	                <select id="surveyStartMinute" name="surveyStartMinute" before="00" class="form-control w-118 inline-block">
+	                    <option value="00" selected="selected">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+	                </select>
+		            </div>
+				</td>
+				<td><span class="in-from">~</span></td>
+				<td>
+					<div class="calendar-set">
+					<input id="surveyEndDate" name="surveyEndDate" before="2022-10-03" label="설문종료일" data-role="calendarpicker" class="form-control w-180 m-r-10 float-left" type="text" value="2022-10-03"/>
+					<select id="surveyEndHour" name="surveyEndHour" before="23" class="form-control w-118 inline-block">
+	                    <option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23" selected="selected">23</option>
+	                </select>
+	                <span class="p-l-5 p-r-5">:</span>
+	                <select id="surveyEndMinute" name="surveyEndMinute" before="59" class="form-control w-118 inline-block">
+	                    <option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59" selected="selected">59</option>
+	                </select>
+		            </div>
+				</td>
+			</tr>
+            </tbody>
+            </table>
+            <br>
+            <hr>
+            <div id ="surveyPhoneTextExample" class="none"></div>
+	<ul class="sub-conent-title p-t-80 p-b-15 b-b-3">
+		<li class="text-pink step-text"><h1><b>STEP02</b></h1></li>
+		<li class="sub-conent-title-text">옵션 설정</li>
+		<li class="sub-conent-title-text-info-lsr">기능을 사용하는 경우에만 ‘사용 ’에 체크하고 설정해주세요.</li>
+	</ul>
+	<table class="table b-t-0">
+		<colgroup>
+			<col width="140px"/>
+			<col width="200px"/>
+			<col width="140px"/>
+			<col width="*"/>
+		</colgroup>
+       
+        <tbody>
+		
+			<tr>
+				<th scope="row">정보 수집
+					<div class="inline-block p-l-10">
+						<div class="popover-wrapper"> 
+							<a href="javascript:void(0);" data-role="popover" data-role-popover="true">
+							</a>
+						</div>
+					</div>
+				</th>
+				<td colspan="3">
+					
+					<div class="check_lsr p-r-40">
+						<input id="statsType0" name="statsType" class="filled-in chk-col-pink" type="checkbox" value="A"/><input type="hidden" name="_statsType" value="on"/> 
+						<label for="statsType0">성별</label>
+					</div>
+					
+					<div class="check_lsr p-r-40">
+						<input id="statsType1" name="statsType" class="filled-in chk-col-pink" type="checkbox" value="B"/><input type="hidden" name="_statsType" value="on"/> 
+						<label for="statsType1">나이</label>
+					</div>
+					
+					<div class="check_lsr p-r-40">
+						<input id="statsType2" name="statsType" class="filled-in chk-col-pink" type="checkbox" value="C"/><input type="hidden" name="_statsType" value="on"/> 
+						<label for="statsType2">학력</label>
+					</div>
+					
+					<div class="check_lsr p-r-40">
+						<input id="statsType3" name="statsType" class="filled-in chk-col-pink" type="checkbox" value="D"/><input type="hidden" name="_statsType" value="on"/> 
+						<label for="statsType3">결혼</label>
+					</div>
+					
+					<div class="check_lsr p-r-40">
+						<input id="statsType4" name="statsType" class="filled-in chk-col-pink" type="checkbox" value="E"/><input type="hidden" name="_statsType" value="on"/> 
+						<label for="statsType4">연봉</label>
+					</div>
+					
+					<div class="check_lsr p-r-40">
+						<input id="statsType5" name="statsType" class="filled-in chk-col-pink" type="checkbox" value="F"/><input type="hidden" name="_statsType" value="on"/> 
+						<label for="statsType5">종교</label>
+					</div>
+					
+				</td>
+			</tr>
+            </tbody>
+            </table>
+            <div class="text-center m-t-50">
+                <button type="button" class="btn_lsr btn-lg waves-effect bg-pink w-200 step2">다음</button>
+            </div>
+        </div>
+        <br>
+            <div id="step2" class="hidden-area">
+                <div class="container_lsr p-b-60">
+                       <ul class="sub-conent-title p-t-80 p-b-15 b-b-3">
+                        <li class="text-pink step-text"><h1><b>STEP03</b></h1></li>
+                        <li class="sub-conent-title-text">
+                            <span class="survey-type survey-type-1 none">설문지 구성</span>
+
+                        </li>
+                        <li class="sub-conent-title-text-info-lsr">설문 문항은 최대 20개까지 작성할 수 있습니다.</li>
+                    </ul>
+                    <div>
+                        <hr>
+                        <label class="p-t-30 p-b-10"><b>제목 입력</b></label>
+                        <input id="surveyWebTitle" name="surveyWebTitle" placeholder="해당 제목은 설문 모바일 화면 상단에 노출됩니다." label="설문 제목" class="form-control" type="text" value="" maxlength="50"/>
+                    </div>
+                    <hr>
+                   
+
+
+
+
+
+
+                    <div>
+                        <textarea class="summernote" name="editordata"></textarea>
+                    </div>
+                  
+
+
+
+
+
+
+                        <div class="noDisplayAttend  agree-area p-t-10">
+                            <div class="clearfix p-b-10">
+                                <select class="form-control agree-count">
+                                    <option value="0" selected>동의절차 사용안함</option>
+                                    <option value="1">동의절차 1 개</option>
+                                    <option value="2">동의절차 2 개</option>
+                                </select>
+                            </div>
+                            <div class="imageUpload agree1 none">
+                                <div class="clearfix p-b-10">
+                                    <label>동의 절차1</label>
+                                </div>
+                                <div class="w-100 inline-block">
+                                    <div class="col-lg-9">
+                                    
+                                           
+                                           <textarea id="guideList3.guideText" name="guideList[3].guideText" label="동의 문구" class="guideText4 textarea" disabled="disabled">
+            </textarea>
+                                           
+                                           
+                                       
+                                        <span class="ex-text text-pink-line"><a href="javascript:void(0);" class="surveyAgreeExampleBtn">예시문 넣기</a></span> 
+                                        <span class="ex-text float-right" id="counter"><span class="byte">0</span> / 4000byte</span>
+                                        <div class="beforeText none"></div> 
+                                        <input id="guideList3.guideType" name="guideList[3].guideType" value="4" type="hidden" value=""/>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="imageUpload agree2 none">
+                                <div class="clearfix p-t-10 p-b-10">
+                                    <label>동의 절차2</label>
+                                </div>
+                                <div class="w-100 inline-block">
+                                    <div class="col-lg-9">
+                                    
+                                           
+                                           <textarea id="guideList4.guideText" name="guideList[4].guideText" label="동의 문구" class="guideText5 textarea" disabled="disabled">
+            </textarea>
+                                           
+                                           
+                                       
+                                        <span class="ex-text text-pink-line"><a href="javascript:void(0);" class="surveyAgreeExampleBtn">예시문 넣기</a></span> 
+                                        <span class="ex-text float-right" id="counter"><span class="byte">0</span> / 4000byte</span>
+                                        <div class="beforeText none"></div> 
+                                        <input id="guideList4.guideType" name="guideList[4].guideType" value="5" type="hidden" value=""/>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <tr>
+                    <th scope="row" class="b-t-0">응답자 제한</th>
+                    <td class="b-t-0 w-200">
+                        <div class="check_lsr">
+                            <input type="checkbox" class="filled-in chk-col-pink" 
+                                name="endType" id="endType" value="2"/>
+                            <label for="endType" class="m-b-0">사용</label>
+                        </div>
+                    </td>
+                    <td colspan="2" class="b-t-0">
+                        <input id="responseLimit" name="responseLimit" class="form-control w-90 inline-block m-r-10 num" disabled="disabled" type="text" value="0"/> 명 응답 시 설문/투표 자동 종료
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">익명 응답</th>
+                    <td class="p-t-15 p-b-15">
+                        <div class="check_lsr">
+                            <input type="checkbox" class="filled-in chk-col-pink" 
+                                name="phoneDisplay" id="phoneDisplay" value="N"/>
+                            <label for="phoneDisplay" class="m-b-0">사용</label>
+                        </div>
+                    </td>
+                    <td colspan="2">응답 결과에서 응답자 휴대폰 번호는 미공개 됩니다.</td>
+                </tr>
+            </div>
+            </div>
+            <script>
+                $('.summernote').summernote({
+                    height:150
+                });
+            </script>
+                    </body>
+</html>
