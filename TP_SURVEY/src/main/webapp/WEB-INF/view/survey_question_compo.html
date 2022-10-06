@@ -21,11 +21,13 @@
 <body>
     <!-- Header(Navigation Bar) 적용을 위한 공백 추가 -->
     <div class="h-150"></div> 
+
+    <!-- PART I -->
     <div class="container">
         <div class="col-md-12">
             <form>
+                <h3><strong>신규생성</strong></h3>
                 <div class="container h-50">
-                    <h3><strong>신규생성</strong></h3>
                     <div class="row">
                         <div class="step">
                             <table>
@@ -43,36 +45,104 @@
                     </div>
                 </div>
                 <div class="container"></div>
+                
                 <!-- PART II -->
                 <h3><strong>1 페이지</strong></h3>
                 <hr>
                 <table>
-                    <tr>
-                        <th scope="row">
-                            <div class="first-block">질문유형</div>
-                        </th>
-                        <td class="second">
-                            <select name="multipleChoiceType" id="multipleChoiceType">
-                                <option value="multipleChoiceDefault" selected>객관식(기본)</option>
-                                <option value="multipleChoiceDropdown">객관식(드롭다운)</option>
-                                <option value="multipleChoiceTableType">객관식(표형)</option>
-                            </select>
-                        </td>
-                        <td><input type="button" id="subjectiveType" name="subjectiveType" value="주관식"></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <div class="first-block qc">질문내용</div>
-                        </th>
-                        <td colspan="3">
-                            <div class="textarea"><textarea name="questionContents" id="questionContents"></textarea></div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="first-block type">질문 유형</div>
+                        </div>
+                        <div class="col">
+                            <div class="multipleChoiceSelect">
+                                <select name="multipleChoiceType" id="multipleChoiceType">
+                                    <option value="multipleChoiceDefault" selected>객관식(기본)</option>
+                                    <option value="multipleChoiceDropdown">객관식(드롭다운)</option>
+                                    <option value="multipleChoiceTableType">객관식(표형)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <input type="button" id="subjectiveType" name="subjectiveType" value="주관식">
+                        </div>
+                        <div class="col">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="first-block qc">질문 내용</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="ta">
+                                <textarea  name="questionContents" id="questionContents"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-3">
                             <div class="imageUpload">이미지 업로드</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>보기 설명</th>
-                        <td><input class="input" type="text"></td>
-                    </tr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="first-block">보기 설명</div>
+                        </div>
+                        <div class="col-9">
+                            <textarea id="choiceDescription" name="choiceDescription"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="first-block">보기 입력</div>
+                        </div>
+                        <div class="col-1">
+                            <div class="uploadedImage">사진</div>
+                        </div>
+                        <div class="col-3 margin-right-300">
+                            <div class="choiceInput">
+                                <input type="text" name="choiceInput" id="choiceInput">
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <img id="plusIcon" name="plusIcon" src="../../../resources/img/plus_Icon_1of20_JJW.png" alt="(+)">
+                        </div>
+                        <div class="col-4">
+                            <div class="isOtherChoice">
+                                <input type="checkbox" id="isOtherChoice"> 기타 응답
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="first-block">보기 선택 수
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="countNumberOfMultipleChoices">
+                                <select name="minCountNumberOfMultipleChoices" id="minCountNumberOfMultipleChoices">
+                                    <option value="1" selected>최소 1개</option>
+                                    <option value="2">최소 2개</option>
+                                    <option value="3">최소 3개</option>
+                                </select>
+                                &nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;
+                                <select name="maxCountNumberOfMultipleChoices" id="maxCountNumberOfMultipleChoices">
+                                    <option value="1" selected>최소 1개</option>
+                                    <option value="2">최소 2개</option>
+                                    <option value="3">최소 3개</option>
+                                    <option value="4">최소 4개</option>
+                                    <option value="5">최소 5개</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="first-block">보기 정렬</div>
+                        </div>
+                        <div class="col">
+                            <select name="choiceSort" id="choiceSort">
+                                <option value="inOrder">순서대로</option>
+                                <option value="random">무작위</option>
+                            </select>
+                        </div>
+                    </div>
                 </table>
             </form>
         </div>
