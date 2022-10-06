@@ -45,30 +45,23 @@
 
 
 
-.STAR_SURVEY{
+.QUESTION_CONTENTS{
     border: 1px solid #000;
     width: 90%;
     margin: 10px auto;
     display: flex;
 }
 
+.QUESTION_CONTENTS > div{
+    overflow: auto; height: 250px;
+    margin: 2px 0;
+    padding: 0 5px;
+}
+
 .STAR_SURVEY1{
     width: 90%;
     margin: 10px auto;
     display: flex;
-}
-
-.QUESTION_CONTENTS > p {
-    border-bottom: 1px solid #000;
-    padding : 10px 5px;
-    margin: 0;
-}
-
-.QUESTION_CONTENTS > div{
-    overflow: auto; height: 250px;
-    border-bottom: 1px solid #000;;
-    margin: 2px 0;
-    padding: 0 5px;
 }
 
 
