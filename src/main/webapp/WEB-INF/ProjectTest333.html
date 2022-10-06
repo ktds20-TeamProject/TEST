@@ -27,8 +27,8 @@
 </head>
 
 <body>
-    <div class="ADMIN_INFO" style="display: block; border: 1px solid #000; padding: 0.4em; text-align: center; width: 12em; margin: -3em 0 0 -6.4em;  position:absolute;
-    top:40%; left:50%;">
+    <div  style="display: block; border: 1px solid #000; padding: 0.5em; text-align: center; width: 20em; margin: auto;  position:relative;
+    top:20em;" class="ADMIN_INFO">
         <form class="form-control" action="login" method="post" ;>
             <div>
                 <label class="form-label">관리자 비밀번호 확인</label>
@@ -36,26 +36,25 @@
         </form>
     </div>
 
-    <div class="INPUT_PW" style="display: block; border: 1px solid #000; padding: 1em; text-align: center; width: 18em; display: table; margin: 0 0 0 -10em;  position:absolute;
-    top:40%; left:50%;">
+    <div class="INPUT_PW" style="display: block; border: 1px solid #000; padding: 3em; text-align: center; width: 25em; display: table; margin: auto;  position:relative;
+    top:21em;">
 
         <form class="form-control2" action="login" method="post">
             <div>
                 <label for="userId" class="form-label">비밀번호 확인</label>
-                <input type="text" name="user_id" id="userId" class="form-control" placeholder="비밀번호 확인"
+                <input style="width: 18em; height: 2.5em;" type="text" name="user_id" id="userId" class="form-control" placeholder="비밀번호 확인"
                     onfocus="this.placeholder=''" onblur="this.placeholder='비밀번호 확인'">
             </div>
 
-            <div class="check-info" style="margin: 1em 0 0 0;">
-                <p><span style="display:inline-block">
-                        <button style="display: block; background-color: white;"
-                            class="btn btn-center btn-block my-3">확인</button>
-                    </span>
-                    <span style="display:inline-block">
-                        <button style="display: block; background-color: white;"
-                            class="btn btn-center btn-block my-3">취소</button>
-                    </span>
-                </p>
+            <div style="margin: 1em 0 0 0; text-align: center;" class="FIND_ID_PW;">
+                <span style="display:inline-block; margin: 1em 2em 0 1em;">
+                    <button style="width: 10em; height: 3em; display: block; background-color: darkgrey;" 
+                        class="btn btn-center btn-block my-3">확인</button>
+                </span>
+                <span style="display:inline-block; margin: 1em 1em 0 2em;">
+                    <button style="width: 10em; height: 3em; display: block; background-color: darkgrey;" 
+                        class="btn btn-center btn-block my-3">취소</button>
+                </span>
             </div>
         </form>
     </div>
