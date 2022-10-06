@@ -1,18 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<!doctype html>
+    pageEncoding="utf-8"%>
+  <!doctype html>
 <html lang="ko">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--±◊∑°«¡ css-->
-    <link rel="stylesheet" href="resources/css/graph_SBM.css">
+    <!--Í∑∏ÎûòÌîÑ css-->
+    <link rel="stylesheet" href="../resources/css/graph_SBM.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="resources/css/bootstrap_KCS.css"></script>
+    <script src="../../resources/css/bootstrap_KCS.css"></script>
+    <script src="https://kit.fontawesome.com/8e8e06ef00.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>user_main_response</title>
     <style>
@@ -28,7 +29,7 @@
 
         thead tr th {
             position: sticky;
-            top: 6.3%;
+            top: 6.4%;
             z-index: 1;
             background-color: white;
         }
@@ -43,7 +44,7 @@
         </a>
     </nav>
     
-    <div style="height: 150px;"></div>
+    <div style="height: 130px;"></div>
 
     <div class="container">
         <div class="col-md-12">
@@ -52,19 +53,19 @@
                     <tr>
                         <th>
                             <div class="survey_title">
-                                <h1 class="wf-style-title" style="text-align:center">º≥πÆ≈∏¿Ã∆≤</h1>
-                                <p style="text-align: center;">º≥πÆ ±‚∞£ - 2022.10.1 ~ 2022.10.30</p>
+                                <h1 class="wf-style-title" style="text-align:center">ÏÑ§Î¨∏ÌÉÄÏù¥ÌãÄ</h1>
+                                <p style="text-align: center;">ÏÑ§Î¨∏ Í∏∞Í∞Ñ - 2022.10.1 ~ 2022.10.30</p>
                             </div>
-                            <!--¡¯«‡ªÛ≈¬ ±◊∑°«¡ Ω√¿€-->
+                            <!--ÏßÑÌñâÏÉÅÌÉú Í∑∏ÎûòÌîÑ ÏãúÏûë-->
                             <div class="wf-progress-wrapper">
                                 <div class="wf-progress">
                                     <div class="wf-progress-bar" style="width: 20%;"></div>
                                 </div>
                                 <div class="wf-progress-text"><span class="wf-progress-bar-text">20%</span></div>
                             </div>
-                            <!--¡¯«‡ªÛ≈¬ ±◊∑°«¡ ≥°-->
+                            <!--ÏßÑÌñâÏÉÅÌÉú Í∑∏ÎûòÌîÑ ÎÅù-->
                             <div class="Page_Notice">
-                                <p style="text-align: center;">∆‰¿Ã¡ˆ æ»≥ªπÆ</p>
+                                <p style="text-align: center;">ÌéòÏù¥ÏßÄ ÏïàÎÇ¥Î¨∏</p>
                             </div>
                         </th>
                     </tr>
@@ -73,7 +74,7 @@
                     <tr>
                         <td>
                             <div class="Question_container" style="text-align: center; margin-bottom: 30px;">
-                                <!--¡÷∞¸Ωƒ πÆ«◊ ¥Ÿ∏• html ∞°¡Æø¿±‚-->
+                                <!--Ï£ºÍ¥ÄÏãù Î¨∏Ìï≠ Îã§Î•∏ html Í∞ÄÏ†∏Ïò§Í∏∞-->
                                 <div data-include-path="subject_choice.jsp"></div>
                                 <script>                window.addEventListener('load', function () {
                                         var allElements = document.getElementsByTagName('*');
@@ -91,7 +92,7 @@
                                             }
                                         });
                                     });            </script>
-                                <!--∞¥∞¸Ωƒ πÆ«◊ ¥Ÿ∏• html ∞°¡Æø¿±‚-->
+                                <!--Í∞ùÍ¥ÄÏãù Î¨∏Ìï≠ Îã§Î•∏ html Í∞ÄÏ†∏Ïò§Í∏∞-->
                                 <div data-include-path="multiple_choice.jsp"></div>
                                 <script>                window.addEventListener('load', function () {
                                         var allElements = document.getElementsByTagName('*');
@@ -109,7 +110,7 @@
                                             }
                                         });
                                     });            </script>
-                                <!--¥Ÿ«◊Ωƒ ¥Ÿ∏• html ∞°¡Æø¿±‚-->
+                                <!--Îã§Ìï≠Ïãù Îã§Î•∏ html Í∞ÄÏ†∏Ïò§Í∏∞-->
                                 <div data-include-path="multiple_matrix.jsp"></div>
                                 <script>                window.addEventListener('load', function () {
                                         var allElements = document.getElementsByTagName('*');
@@ -127,7 +128,7 @@
                                             }
                                         });
                                     });            </script>
-                                    <!--µÂ∑”¥ŸøÓ ¥Ÿ∏• html ∞°¡Æø¿±‚-->
+                                    <!--ÎìúÎ°≠Îã§Ïö¥ Îã§Î•∏ html Í∞ÄÏ†∏Ïò§Í∏∞-->
                                 <div data-include-path="DROPDOWN_SURVEY.jsp"></div>
                                 <script>                window.addEventListener('load', function () {
                                         var allElements = document.getElementsByTagName('*');
@@ -145,7 +146,7 @@
                                             }
                                         });
                                     });            </script>
-                                    <!--∫∞¡° ¥Ÿ∏• html ∞°¡Æø¿±‚-->
+                                    <!--Î≥ÑÏ†ê Îã§Î•∏ html Í∞ÄÏ†∏Ïò§Í∏∞-->
                                 <div data-include-path="STAR_SUVEY.jsp"></div>
                                 <script>                window.addEventListener('load', function () {
                                         var allElements = document.getElementsByTagName('*');
@@ -165,10 +166,10 @@
                                     });            </script>
                             </div>
                             <div class="Button" style="text-align: center;">
-                                <!--√π∆‰¿Ã¡ˆ æ»∫∏¿”-->
-                                <button type="submit" class="Prev_Button"><span>¿Ã¿¸</span></button>
-                                <!--∏∂¡ˆ∏∑∆‰¿Ã¡ˆ æ»∫∏¿”-->
-                                <button type="submit" class="Next_Button"><span>¥Ÿ¿Ω</span></button>
+                                <!--Ï≤´ÌéòÏù¥ÏßÄ ÏïàÎ≥¥ÏûÑ-->
+                                <button type="submit" class="Prev_Button"><span>Ïù¥Ï†Ñ</span></button>
+                                <!--ÎßàÏßÄÎßâÌéòÏù¥ÏßÄ ÏïàÎ≥¥ÏûÑ-->
+                                <button type="submit" class="Next_Button"><span>Îã§Ïùå</span></button>
                             </div>
                         </td>
                     </tr>
@@ -183,10 +184,10 @@
     <div class="container" style="position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);">
         <div class="row">
             <div class="col-sm-12" style="text-align: center;">
-                ¡÷º“ : º≠øÔΩ√ ±›√µ±∏ ∫¢≤…∑Œ 286. 508»£(∞°ªÍµø 60-15, ∏Æ¥ıΩ∫≈∏øˆ) | ¿¸»≠ 02-6283-1800 | ∆—Ω∫ 02-6283-1808
+                Ï£ºÏÜå : ÏÑúÏö∏Ïãú Í∏àÏ≤úÍµ¨ Î≤öÍΩÉÎ°ú 286. 508Ìò∏(Í∞ÄÏÇ∞Îèô 60-15, Î¶¨ÎçîÏä§ÌÉÄÏõå) | Ï†ÑÌôî 02-6283-1800 | Ìå©Ïä§ 02-6283-1808
             </div>
             <div class="col-sm-12" style="text-align: center;">
-                Copyright ®œ ∫∏∞Ì¡§∫∏Ω√Ω∫≈€(¡÷). All rights reserved.
+                Copyright ‚ìí Î≥¥Í≥†Ï†ïÎ≥¥ÏãúÏä§ÌÖú(Ï£º). All rights reserved.
             </div>
         </div>
     </div>

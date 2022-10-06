@@ -10,6 +10,7 @@
   <title>별점설문</title>
   <link rel="stylesheet" href="resources/css/STAR_SURVEY_style_KCS.css">
   <link rel="stylesheet" href="resources/css/bootstrap_KCS.css">
+  <script src="https://kit.fontawesome.com/8e8e06ef00.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -65,31 +66,18 @@
         </div>
      
       <div div class=STAR_SURVEY1>
-        <div class="starpoint_wrap">
-          <div class="starpoint_box">
-            <label for="starpoint_1" class="label_star" title="0.5"><span class="blind">0.5점</span></label>
-            <label for="starpoint_2" class="label_star" title="1"><span class="blind">1점</span></label>
-            <label for="starpoint_3" class="label_star" title="1.5"><span class="blind">1.5점</span></label>
-            <label for="starpoint_4" class="label_star" title="2"><span class="blind">2점</span></label>
-            <label for="starpoint_5" class="label_star" title="2.5"><span class="blind">2.5점</span></label>
-            <label for="starpoint_6" class="label_star" title="3"><span class="blind">3점</span></label>
-            <label for="starpoint_7" class="label_star" title="3.5"><span class="blind">3.5점</span></label>
-            <label for="starpoint_8" class="label_star" title="4"><span class="blind">4점</span></label>
-            <label for="starpoint_9" class="label_star" title="4.5"><span class="blind">4.5점</span></label>
-            <label for="starpoint_10" class="label_star" title="5"><span class="blind">5점</span></label>
-            <input type="radio" name="starpoint" id="starpoint_1" class="star_radio">
-            <input type="radio" name="starpoint" id="starpoint_2" class="star_radio">
-            <input type="radio" name="starpoint" id="starpoint_3" class="star_radio">
-            <input type="radio" name="starpoint" id="starpoint_4" class="star_radio">
-            <input type="radio" name="starpoint" id="starpoint_5" class="star_radio">
-            <input type="radio" name="starpoint" id="starpoint_6" class="star_radio">
-            <input type="radio" name="starpoint" id="starpoint_7" class="star_radio">
-            <input type="radio" name="starpoint" id="starpoint_8" class="star_radio">
-            <input type="radio" name="starpoint" id="starpoint_9" class="star_radio">
-            <input type="radio" name="starpoint" id="starpoint_10" class="star_radio">
-            <span class="starpoint_bg"></span>
-          </div>
-        </div>
+         <div class="star-rating space-x-4 mx-auto">
+      <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings" />
+      <label for="5-stars" class="star pr-4"><i class="fa-solid fa-star"></i></label>
+      <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings" />
+      <label for="4-stars" class="star"><i class="fa-solid fa-star"></i></label>
+      <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings" />
+      <label for="3-stars" class="star"><i class="fa-solid fa-star"></i></label>
+      <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings" />
+      <label for="2-stars" class="star"><i class="fa-solid fa-star"></i></label>
+      <input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+      <label for="1-star" class="star"><i class="fa-solid fa-star"></i></label>
+    </div>
       </div>
 
 </body>
