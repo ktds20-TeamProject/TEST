@@ -48,6 +48,13 @@
 				<input type="submit" value="로그인" class="#" />  
 		</div> 
 		    <hr>
+		    <div id="#" align="center">
+				<input type="submit" value="아이디 찾기" class="#"/>
+				|
+				<input type="submit" value="비밀번호 찾기" class="#"/>  
+				|
+				<input type="submit" value="회원가입" class="#"/>
+			</div>
       </form>
           <div class="col-md-3"></div><%--좌우 여백 줄이기 --%>
     </div>

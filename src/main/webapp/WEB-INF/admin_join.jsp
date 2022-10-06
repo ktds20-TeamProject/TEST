@@ -32,7 +32,7 @@
           <tr height="55">
             <td width="25%" class="Join1">아이디</td>
             <td width="75%" class="Join2"><input name="#" id="#"class="#" /> 
-            <input type="button" value="아이디중복체크"class="#" onclick="#">
+            <input type="button" value="아이디 중복체크"class="#" onclick="#">
 			<span id="#"></span></td>
           </tr>
           <tr height="55">
