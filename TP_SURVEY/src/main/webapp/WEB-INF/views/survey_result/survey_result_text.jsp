@@ -25,15 +25,15 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/survey_result_lys.css">
     <link rel="stylesheet" href="../../../resources/css/survey_result_lys.css">
     <!--폰트어썸-->
-    <script src="https://kit.fontawesome.com/8e8e06ef00.js" crossorigin="anonymous"></script>
-	    
+    <script src="https://kit.fontawesome.com/8e8e06ef00.js" crossorigin="anonymous"></script>  
+	
 	<script  src="http://code.jquery.com/jquery-latest.min.js"></script> 
 	<script type="text/javascript">
 	
 
 </script>
 
-<title>Survey_result_multipleTable</title>
+<title>Survey_result_text</title>
 </head>
 <body>
     <!--질문 기본정보-->

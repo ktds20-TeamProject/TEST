@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="../../../resources/css/survey_result_lys.css">
     <!--폰트어썸-->
     <script src="https://kit.fontawesome.com/8e8e06ef00.js" crossorigin="anonymous"></script>
+    <!--Chart.js <다운로드 받는걸로 바꿀까??? 고민을 하넌 중-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	    
 	<script  src="http://code.jquery.com/jquery-latest.min.js"></script> 
 	<script type="text/javascript">
@@ -33,7 +36,7 @@
 
 </script>
 
-<title>Survey_result_multipleTable</title>
+<title>Survey_result_multiple</title>
 </head>
 <body>
     <!--질문 기본정보-->
