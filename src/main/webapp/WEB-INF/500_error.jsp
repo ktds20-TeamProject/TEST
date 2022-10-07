@@ -15,7 +15,7 @@
             <div class="col-md-12" style="text-align:center;">
                 <div class="pull-right" style="margin-top:10px;">
                     <div class="col-md-10 col-md-offset-1 pull-right">
-                        <img src="../images/500pic.jpg">
+                        <img src=../resources/images/500pic.jpg>
                         <div class="error-actions">
                             <input class="button" type="reset" value="이전 화면" onclick="#" style="box-shadow:inset 0px 0px 0px 0px #bee2f9; 
                             background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%); background-color:#63b8ee; border-radius:42px;
@@ -27,7 +27,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
