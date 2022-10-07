@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <!-- CSS 적용 -->
-    <link rel="stylesheet" href="../../../resources/css/survey_question_compo_JJW.css">
+    <link rel="stylesheet" href="../../../resources/css/survey_question_compo_default_JJW.css">
 </head>
 <body>
     <!-- Header(Navigation Bar) 적용을 위한 공백 추가 -->
@@ -74,13 +74,29 @@
                             <div class="first-block qc">질문 내용</div>
                         </div>
                         <div class="col-6">
-                            <div class="ta">
-                                <textarea  name="questionContents" id="questionContents"></textarea>
+                            <div class="textArea">
+                                <textarea name="questionContents" id="questionContents"></textarea>
+                                <div class="spans"><span>text</span><span>html</span>
+                                &nbsp;&nbsp;
+                                <div class="exampleStatement">
+                                    <a href="#">예시문 넣기</a>
+                                </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="countNumberOfLetters">
+                                    400/4000 Byte
+                                </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="sizeOfImage">
+                                    200 KB 이하 jpg, png 형식
+                                </div>
                             </div>
                         </div>
-                        <div class="col-3">
-                            <div class="imageUpload">이미지 업로드</div>
-                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="imageUpload">이미지 업로드</div>
+                    </div>
                     </div>
                     <div class="row">
                         <div class="col">
@@ -97,7 +113,7 @@
                         <div class="col-1">
                             <div class="uploadedImage">사진</div>
                         </div>
-                        <div class="col-3 margin-right-300">
+                        <div class="col-3">
                             <div class="choiceInput">
                                 <input type="text" name="choiceInput" id="choiceInput">
                             </div>
@@ -107,7 +123,7 @@
                         </div>
                         <div class="col-4">
                             <div class="isOtherChoice">
-                                <input type="checkbox" id="isOtherChoice"> 기타 응답
+                                <input type="checkbox" id="isOtherChoice" name="isOtherChoice"> 기타 응답
                             </div>
                         </div>
                     </div>

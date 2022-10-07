@@ -1,3 +1,41 @@
+textarea
+{
+    width: 520px;
+    height: 100px;
+    resize: none;
+    display: inline-block;
+}
+.sizeOfImage
+{
+    display: inline;
+    width: 250px;
+    margin-left: 50px;
+}
+.countNumberOfLetters
+{
+    text-align: right;
+    display: inline;
+    width: 180px;
+}
+.spans > span
+{
+    border: 1px solid gray;
+    position: relative;
+    top: -7px;
+}
+.exampleStatement
+{
+    display: inline;
+    width: 100px;
+    text-align: center;
+    margin-right: 130px;
+}
+.spans
+{
+    width: 802px;
+    height: 30px;
+    display: inline-flex;
+}
 .h-50
 {
     height: 50px;
@@ -66,14 +104,7 @@ table
     text-align:center;
     display: flex;
 }
-textarea
-{
-    width: 520px;
-    height: 100px;
-    resize: none;
-    display: inline-block;
-}
-.ta
+.textArea
 {
     width: 450px;
     height: 100px;
@@ -128,17 +159,7 @@ th
 {
     height: 30px;
 }
-.uploadedImage
-{
-    border: 1px solid gray;
-    width: 100px;
-    height: 75px;
-    display: inline-block;
-    margin-right: 300px;
-    margin-top: 30px;
-    padding-top: 23px;
-    padding-right: 5px;
-}
+
 #multipleChoiceType
 {
     text-align: center;
