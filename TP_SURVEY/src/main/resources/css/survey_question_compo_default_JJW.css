@@ -1,0 +1,229 @@
+textarea
+{
+    width: 520px;
+    height: 100px;
+    resize: none;
+    display: inline-block;
+}
+.sizeOfImage
+{
+    display: inline;
+    width: 250px;
+    margin-left: 50px;
+}
+.countNumberOfLetters
+{
+    text-align: right;
+    display: inline;
+    width: 180px;
+}
+.spans > span
+{
+    border: 1px solid gray;
+    position: relative;
+    top: -7px;
+}
+.exampleStatement
+{
+    display: inline;
+    width: 100px;
+    text-align: center;
+    margin-right: 130px;
+}
+.spans
+{
+    width: 802px;
+    height: 30px;
+    display: inline-flex;
+}
+.h-50
+{
+    height: 50px;
+}
+.h-150
+{
+    height: 150px;
+}
+.wd-50
+{
+    width: 50px;
+}
+.wd-100
+{
+    width: 100px;
+}
+.container
+{
+    height: 50px;
+}
+.m-10
+{
+    margin: 0px 30px;
+}
+.step
+{
+    padding: 20px 0;
+    border: 1px solid gray;
+    text-align: center;
+    justify-content: center;
+    width: 1200px;
+}
+ol, ul, li 
+{
+    list-style: none;
+    margin-bottom: 0px !important;
+    display:inline;
+}
+table
+{
+    border:1px solid gray; /* 표의 테두리 - 1px 회색 실선 */
+    border-collapse:collapse; /* 표 테두리와 셀 테두리 합치기 */
+    width: 1200px;
+}
+.first-block
+{
+    border: 1px solid gray;
+    width: 150px;
+    margin: 30px;
+    height: 75px;
+    text-align: center;
+    padding-top: 25px;
+}
+.second-block
+{
+    border: 1px solid gray;
+    width: 800px;
+    display: inline-flex;
+}
+.h-25
+{
+    height: 25px;
+}
+.row
+{
+    text-align:center;
+    display: flex;
+}
+.textArea
+{
+    width: 450px;
+    height: 100px;
+}
+select
+{
+    height: 35px;
+}
+.second
+{
+    width: 300px;
+}
+#subjectiveType
+{
+    height: 35px;
+    width: 100px;
+    margin-top: 30px;
+    font-size: medium;
+    margin-right: 120px;
+}
+th
+{
+    width: 100px;
+    border-collapse:collapse; /* 표 테두리와 셀 테두리 합치기 */
+    /* border:1px solid gray; /* 표의 테두리 - 1px 회색 실선 */
+}
+
+.input
+{
+    height: 70px;
+}
+.type
+{
+    height: 35px;
+    padding: 5px;
+}
+.qc
+{
+    height: 100px;
+    padding-top: 35px;
+}
+.imageUpload
+{
+    width: 300px;
+    height: 100px;
+    border: 1px solid gray;
+    margin-top: 30px;
+    margin-left: 64px;
+    padding-top: 35px;
+}
+.h-30
+{
+    height: 30px;
+}
+
+#multipleChoiceType
+{
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 120px;
+}
+.multipleChoiceSelect
+{
+    width: 300px;
+    margin-top: 30px;
+}
+.col-6
+{
+    display: inline-block;
+}
+.col
+{
+    display: inline-block;
+}
+#questionContents
+{
+    margin-top: 30px;
+    width: 620px;
+}
+#choiceInput
+{
+    margin-right: 300px;
+    margin-top: 30px;
+    display: inline-block;
+    width: 300px;
+    height: 75px;
+}
+.choiceInput
+{
+    margin-right: 300px;
+}
+#choiceDescription
+{
+    margin-right: 600px;
+    margin-top: 30px;
+    width: 920px;
+    height: 75px;
+}
+.countNumberOfMultipleChoices
+{
+    margin-top: 50px;
+}
+#choiceSort
+{
+    margin-top: 50px;
+    margin-right: 160px;
+}
+#plusIcon
+{
+    margin-top: 35px;
+    margin-left: 50px;
+}
+.isOtherChoice
+{
+    margin-top: 55px;
+    margin-right: 160px;
+}
+#administrativeTitle
+{
+    width: 100%;
+    font-size:15px;
+}
