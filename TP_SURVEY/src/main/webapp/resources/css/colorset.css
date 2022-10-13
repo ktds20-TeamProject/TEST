@@ -1,0 +1,10 @@
+  /*하기: 보고 CI컬러 추가*/
+  :root {
+        --bogoblue: #27a8e0;
+        --bogobluedark: #1480ad;
+        --bogobluelight: #b8d7e4;
+        --bogored: #ef4136;
+        --bogoreddark: #a31a10;
+        --bogoredlight: #ffbbb6;
+        --bogoindigo: #352f66;
+  }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+   <definition name="baseLayout"  template="/WEB-INF/views/commons/layout.jsp">
+      <put-attribute name="title" value="" />
+      <put-attribute name="header" value="/WEB-INF/views/commons/header.jsp" />
+      <put-attribute name="body" value="" />
+      <put-attribute name="footer" value="/WEB-INF/views/commons/footer.jsp" />
+   </definition>
+
+   <definition name="main" extends="baseLayout">
+      <put-attribute name="title" value="메인페이지" />
+      <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+   </definition>
+   
+      <definition name="" extends="baseLayout">
+      <put-attribute name="title" value="메인페이지" />
+      <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+   </definition>
+   
+      <definition name="admin_main" extends="baseLayout">
+      <put-attribute name="title" value="관리자메인" />
+      <put-attribute name="body" value="/WEB-INF/views/admin/admin_main.jsp" />
+   </definition>
+   
+    <definition name="survey_modify" extends="baseLayout">
+      <put-attribute name="title" value="설문수정" />
+      <put-attribute name="body" value="/WEB-INF/views/survey/survey_info_and_option.jsp" />
+   </definition>
+   
+   <definition name="survey_info_and_option" extends="baseLayout">
+      <put-attribute name="title" value="설문정보추가옵션" />
+      <put-attribute name="body" value="/WEB-INF/views/survey/survey_info_and_option.jsp" />
+   </definition>
+   
+   
+   <definition name="survey_basic_composition" extends="baseLayout">
+      <put-attribute name="title" value="기본설문정보" />
+      <put-attribute name="body" value="/WEB-INF/views/survey/survey_basic_composition.jsp" />
+   </definition>
+   
+   <definition name="survey_question_compo" extends="baseLayout">
+      <put-attribute name="title" value="설문정보" />
+      <put-attribute name="body" value="/WEB-INF/views/survey/survey_question_compo.jsp" />
+   </definition>
+   
+   
+
+<!-- 타일즈 제외(레이아웃 없이 각 jsp페이지만 출력) -->
+	<definition name="empty" template="/WEB-INF/views/admin/empty.jsp">
+   		<put-attribute name="body" value=""/>
+    </definition>
+   
+</tiles-definitions>
