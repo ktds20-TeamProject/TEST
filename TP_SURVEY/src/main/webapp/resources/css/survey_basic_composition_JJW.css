@@ -1,0 +1,49 @@
+ol, ul, li 
+{
+    list-style: none;
+    margin-bottom: 0px !important;
+    display:inline;
+}
+
+.h-150
+{
+    height: 150px;
+}
+.step
+{
+    padding: 20px 0;
+    border: 1px solid gray;
+    text-align: center;
+    justify-content: center;
+    width: 1200px;
+}
+.container
+{
+    height: 50px;
+}
+.m-10
+{
+    margin: 0px 30px;
+}
+
+.surveyNotice
+{
+    width: 738px;
+}
+
+.attachedImage
+{
+    width: 300px;
+    height: 100px;
+    border: 1px solid gray;
+    margin-top: 30px;
+    margin-left: 64px;
+    padding-top: 35px;
+}
+
+#surveyNotice, #titleInput
+{
+    width: 1080px;
+    height: 100px;
+    resize: none;
+}

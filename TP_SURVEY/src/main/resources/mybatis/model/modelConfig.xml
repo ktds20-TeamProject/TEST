@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration 	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.main.java.composition.vo.ChoiceInfoVO"  alias="ChoiceInfoVO" />
+		<typeAlias type="com.main.java.composition.vo.MatrixChoiceVO"  alias="MatrixChoiceVO" />
+		<typeAlias type="com.main.java.composition.vo.MatrixQuestionVO"  alias="MatrixQuestionVO" />
+		<typeAlias type="com.main.java.composition.vo.MultipleChoiceVO"  alias="MultipleChoiceVO" />
+		<typeAlias type="com.main.java.composition.vo.QuestionInfoVO"  alias="QuestionInfoVO" />
+		<typeAlias type="com.main.java.composition.vo.SubjectiveChoiceVO"  alias="SubjectiveChoiceVO" />
+	</typeAliases>
+</configuration>

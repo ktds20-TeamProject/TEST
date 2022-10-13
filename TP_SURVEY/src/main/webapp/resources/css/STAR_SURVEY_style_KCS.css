@@ -1,0 +1,97 @@
+
+
+.question_inform {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+}
+
+.question_number {
+    border: 1px solid black;
+    flex: 0.30;
+    margin-right: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.question_title {
+    border: 1px solid black;
+    flex: 0.7;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.required_answer_container {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+}
+
+.required_blank {
+    flex: 0.3;
+    margin-right: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.required_answer {
+    border: 1px solid black;
+    flex: 0.7;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+
+
+.QUESTION_CONTENTS{
+    border: 1px solid #000;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+}
+
+.QUESTION_CONTENTS > div{
+    overflow: auto; height: 250px;
+    margin: 2px 0;
+    padding: 0 5px;
+}
+
+.STAR_SURVEY1{
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+}
+
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 5rem;
+    line-height: 2.5rem;
+    justify-content: space-around;
+    padding: 0 0.2em;
+    text-align: center;
+    width: 10em;
+  }
+   
+  .star-rating input {
+    display: none;
+  }
+   
+  .star-rating label {
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2.3px;
+    -webkit-text-stroke-color: #2b2a29;
+    cursor: pointer;
+  }
+   
+  .star-rating :checked ~ label {
+    -webkit-text-fill-color: #fe1;
+  }
+   
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    -webkit-text-fill-color: #fff58c;
+  }
