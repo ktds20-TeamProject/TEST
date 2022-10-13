@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="utf-8"%>
 <!doctype html>
 <html lang="ko">
 
@@ -72,16 +72,16 @@
 
 <body>
     <div class="question_inform">
-        <div class="question_number">π¯»£</div>
-        <div class="question_title">¡˙πÆ</div>
+        <div class="question_number">Î≤àÌò∏</div>
+        <div class="question_title">ÏßàÎ¨∏</div>
     </div>
     <div class="required_answer_container">
         <div class="required_blank"></div>
-        <div class="required_answer">« ºˆ¿¿¥‰ø©∫Œ</div>
+        <div class="required_answer">ÌïÑÏàòÏùëÎãµÏó¨Î∂Ä</div>
     </div>
     <div class="answer_container" style="text-align: left;padding-top: 5px;">
         <div class="exampleDiv clearfix questType1">
-            <div class="exampleDesc">∫∏±‚ º≥∏Ì</div>
+            <div class="exampleDesc">Î≥¥Í∏∞ ÏÑ§Î™Ö</div>
             <div class="matrix">
                 <div class="rowdata">
                     <table class="table table-striped">
@@ -89,25 +89,25 @@
                             <tr>
                                 <td>
                                 <th>
-                                    <p>∏≈øÏ ±◊∑∏¥Ÿ.</p>
+                                    <p>Îß§Ïö∞ Í∑∏Î†áÎã§.</p>
                                 </th>
                                 <th>
-                                    <p>±◊∑∏¥Ÿ.</p>
+                                    <p>Í∑∏Î†áÎã§.</p>
                                 </th>
                                 <th>
-                                    <p>∏∏£∞⁄¥Ÿ.</p>
+                                    <p>Î™®Î•¥Í≤†Îã§.</p>
                                 </th>
                                 <th>
-                                    <p>±◊∑∏¡ˆ æ ¥Ÿ.</p>
+                                    <p>Í∑∏Î†áÏßÄ ÏïäÎã§.</p>
                                 </th>
                                 <th>
-                                    <p>∏≈øÏ ±◊∑∏¡ˆ æ ¥Ÿ.</p>
+                                    <p>Îß§Ïö∞ Í∑∏Î†áÏßÄ ÏïäÎã§.</p>
                                 </th>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <p>¡˙πÆ 1.</p>
+                                    <p>ÏßàÎ¨∏ 1.</p>
                                 </td>
                                 <td> <input type="radio" class="radio ms" name="example1">
                                 </td>
@@ -122,7 +122,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <p>¡˙πÆ 2.</p>
+                                    <p>ÏßàÎ¨∏ 2.</p>
                                 </td>
                                 <td> <input type="radio" class="radio ms" name="example2">
                                 </td>

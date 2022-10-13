@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" 
-    isELIgnored="false"  %> 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
-<c:set var="contextPath"  value="${pageContext.request.contextPath}"  />
-<%  request.setCharacterEncoding("UTF-8"); %>
+    pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -59,7 +55,7 @@
     <!-- PART I -->
     <div class="container">
         <div class="col-md-12">
-            <form>
+            <form name="frmNext" method="GET" action="${contextPath}/next_survey_info_and_option.do">
                 <h3><strong>신규생성</strong></h3>
                 <div class="container h-50">
                     <div class="row">
@@ -84,7 +80,7 @@
                     <tr>
                         <th class="first">제목</th>
                         <td colspan="3">
-                            <input id="administrativeTitle" name="administrativeTitle" placeholder="관리용 제목을 입력해주세요" label="제목" type="text" />
+                            <input type="text" id="administrativeTitle" name="administrativeTitle" placeholder="관리용 제목을 입력해주세요" label="제목"/>
                         </td>
                     </tr>
                     <tr>
@@ -103,11 +99,11 @@
                         <td>
                             <div>
                                 <input class="datepicker" id="endDate" name="endDate" before="2022-10-03" label="설문종료일" data-role="calendarpicker"type="text"/>
-                                <select id="endHour" name="endHour" before="23">
+                                <select id="endHour" name="endHour" before="00">
                                     <option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23" selected="selected">23</option>
                                 </select>
                                 <span>:</span>
-                                <select id="endMinute" name="endMinute" before="59">
+                                <select id="endMinute" name="endMinute" before="00">
                                     <option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59" selected="selected">59</option>
                                 </select>
                             </div>
@@ -119,17 +115,17 @@
                 <table>
                     <tr>
                         <th scope="row">응답자 제한</th>
-                        <td class="second"><input type="checkbox">&nbsp;사용</td>
-                        <td class="third" colspan="2"><input type="text">&nbsp;명 응답시 설문 종료</td>
+                        <td class="second"><input type="checkbox" name="isLimit" value="true">&nbsp;사용</td>
+                        <td class="third" colspan="2"><input type="text" name="limitNum">&nbsp;명 응답시 설문 종료</td>
                     </tr>
                     <tr>
                         <th scope="row">익명 응답</th>
-                        <td class="second"><input type="checkbox">&nbsp;사용</td>
+                        <td class="second"><input type="checkbox" name="isAnonymous" value="true">&nbsp;사용</td>
                         <td class="third" colspan="2">응답 결과에서 이름과 휴대폰 번호는 공개되지 않습니다.</td>
                     </tr>
                     <tr>
                         <th scope="row">본인 확인</th>
-                        <td><input type="checkbox">&nbsp;사용</td>
+                        <td><input type="checkbox" name="isConfirmIdentification" value="true">&nbsp;사용</td>
                         <th class="wd-50" scope="row">인증 방식</th>
                         <td>
                             <select name="authTypeSelect" id="authTypeSelect">
@@ -142,9 +138,14 @@
                     </tr>
                 </table>
                 <br>
-                <div class="container next"><button type="button" class="btn btn-primary">다음</button></div>
+                <div class="container next">
+                <input type="submit" class="btn btn-primary" value="다음">
+                </div>
             </form>
         </div>
     </div>
   </body>
 </html>
+<script>
+history.replaceState({}, null, location.pathname);
+</script>

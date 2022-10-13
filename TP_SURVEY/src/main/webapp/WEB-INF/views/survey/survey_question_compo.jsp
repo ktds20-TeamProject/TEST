@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" 
-    isELIgnored="false"  %> 
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -24,11 +24,11 @@
 <body>
     <!-- Header(Navigation Bar) 적용을 위한 공백 추가 -->
     <div class="h-150"></div> 
-	
+
     <!-- PART I -->
     <div class="container">
         <div class="col-md-12">
-            <form method="POST" action="${context}/composition/insert.do">
+            <form method="GET">
                 <h3><strong>신규생성</strong></h3>
                 <div class="container h-50">
                     <div class="row">
@@ -106,7 +106,7 @@
                             </div>
                         </div>
                         <div class="col-1">
-                            <img id="plusIcon" name="plusIcon" src="../../../resources/images/plus_Icon_1of20_JJW.png" alt="(+)">
+                            <img id="plusIcon" name="plusIcon" src="../../../resources/img/plus_Icon_1of20_JJW.png" alt="(+)">
                         </div>
                         <div class="col-4">
                             <div class="isOtherChoice">
@@ -147,14 +147,11 @@
                         </div>
                     </div>
                 </table>
-                <div class="container">
-           		<button type="submit" class="btn btn-primary">
-           			저장
-           		</button>
-            </div>
             </form>
-            <div style="padding-bottom:150px;"></div>
         </div>
     </div>
 </body>
 </html>
+<script>
+history.replaceState({}, null, location.pathname);
+</script>

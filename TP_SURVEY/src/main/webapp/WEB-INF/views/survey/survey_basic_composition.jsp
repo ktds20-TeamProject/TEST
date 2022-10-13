@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+ 
+
 <!DOCTYPE html>
 <html lang="ko">
     <meta charset="UTF-8" />
@@ -34,7 +39,7 @@
     <!-- PART I -->
     <div class="container">
         <div class="col-md-12">
-            <form>
+            <form name="frmNext" method="GET"  action="${contextPath}/next_survey_basic_composition.do">
                 <h3><strong>신규생성</strong></h3>
                 <div class="container h-50">
                     <div class="row">
@@ -54,7 +59,7 @@
                     </div>
                 </div>
                 <div class="container"></div>
-				
+
                 <!-- PART II -->
                 <h3><strong>설문지 구성</strong></h3>
                 <hr>
@@ -65,6 +70,8 @@
                 <br>
                 <h4><b>설문 안내문</b></h4>
                 <textarea name="surveyNotice" id="surveyNotice"></textarea>
+           		 <input type="submit" value="다음" >
+           		
             </form>
         </div>
     </div>

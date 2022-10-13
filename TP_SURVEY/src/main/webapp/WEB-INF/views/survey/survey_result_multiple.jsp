@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../../../resources/css/colorset.css">
     <!--result css-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/survey_result_lys.css">
-survey_result_multiple    <link rel="stylesheet" href="../../../resources/css/survey_result_lys.css">
+    <link rel="stylesheet" href="../../../resources/css/survey_result_lys.css">
     <!--폰트어썸-->
     <script src="https://kit.fontawesome.com/8e8e06ef00.js" crossorigin="anonymous"></script>
     <!--Chart.js <다운로드 받는걸로 바꿀까??? 고민을 하넌 중-->
